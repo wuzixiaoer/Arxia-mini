@@ -1,0 +1,23 @@
+{
+  "name": "Arxia-mini",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wuzixiaoer/Arxia-mini.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wuzixiaoer/Arxia-mini/issues"
+  },
+  "homepage": "https://github.com/wuzixiaoer/Arxia-mini#readme",
+  "description": "",
+  "dependencies": {
+    "log4js": "^4.5.1"
+  }
+}
