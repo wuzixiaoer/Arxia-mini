@@ -1,9 +1,9 @@
 <view class="page-body">
   <view class="page-body-wrapper">
-    <camera device-position="back" flash="off" binderror="error" style="width: 100%; height: 600px;">
-      <cover-view class="camera-mask">
-        <cover-image class="img" src="/imgs/mask.png"/>
-      </cover-view>
+    <camera device-position="front" flash="off" binderror="error" style="width: 250px; height: 250px;"  >
+      <!-- <cover-view class="camera-mask">
+        <cover-image class="img" src="/static/mask_imgs/mask.png"/>
+      </cover-view> -->
     </camera>
     <view class="btn-area">
       <button type="primary" bindtap="previous">返回</button>
