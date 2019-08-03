@@ -1,25 +1,20 @@
 /**index.wxss**/
-.userinfo {
+.container{
+  justify-items: flex-start;
+}
+.page-body{
+  width: 600rpx;
+  height: 8000rpx;
+}
+.text{
+  margin-top: 0rpx;
+  margin-bottom: 70rpx;
+  font-size:50rpx;
+  color:white;
+  justify-content: center;
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
-}
-
-.page-body{
-  width: 500rpx;
+.confirm_btn{
+  margin-top: 150rpx
 }

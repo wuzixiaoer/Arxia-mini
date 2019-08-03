@@ -1,14 +1,16 @@
-<view class="container">
+
+<view class="container" style="background-color: {{bgColor}}" >
+<text class="text" >梵高</text>
   <view class="page-body">
-    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange='onSlideChangeEnd'>
-  <block wx:for="{{background}}">
-    <swiper-item>
-      <image src="{{item}}" class="slide-image" style="width: 200px; height: 200px"/>
-    </swiper-item>
-  </block>
-</swiper>
-<button bindtap="confirm" > confirm </button>
-    </view>
-   </view> 
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}"                                duration="{{duration}}" bindchange='onSlideChangeEnd'>
+      <block wx:for="{{styles}}" background ="{{bgColors}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" style="width: 250px; height: 300px"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  <button class="confirm_btn" bindtap="confirm" color="transparent"> confirm </button>
+  </view>
+</view> 
 
     
