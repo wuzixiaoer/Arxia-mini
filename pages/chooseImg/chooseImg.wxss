@@ -1,0 +1,34 @@
+/**index.wxss**/
+.slide-image{
+  display: block;
+  width: 100%;
+  height: 670rpx;
+  overflow: hidden;
+}
+
+swiper-item{
+  display: flex;
+  height: 300rpx;
+  align-items:center;
+  overflow: hidden;
+}
+.page-body{
+  width: 100%;
+  height: 100%;
+  justify-items:center;
+}
+
+.text{
+  margin-top: 0rpx;
+  margin-bottom: 70rpx;
+  font-size:50rpx;
+  color:white;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  opacity: 100;
+}
+
+.confirm_btn{
+  margin-top: 150rpx
+}

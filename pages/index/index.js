@@ -1,57 +1,71 @@
-//index.js
-//获取应用实例
-const app = getApp()
-var picname = ["梵高","喜羊羊","大头猪"]
-var style_label = 0
+// pages/index/index.js
+Page({
 
-Page(
-  {
+  /**
+   * 页面的初始数据
+   */
   data: {
-    styles: ['/static/style_imgs/img1.jpg', '/static/style_imgs/img2.jpg', '/static/style_imgs/img3.jpg'],
-    current_picname: picname[0],
-    indicatorDots: true,
-    autoplay: false,
-    interval: 5000,
-    duration: 1000,
-    swipper_index: 0,
-    label:0,
-    bgColor: '#a8a8a8',
-    bgColors:['#a8a8a8', '#8b7355', "#4d4d4d"]
+
   },
-  onSlideChangeEnd: function (e) {
-    var that = this;
-    that.setData({
-      swipper_index: e.detail.current+1,
-      bgColor: this.data.bgColors[e.detail.current],
-      current_picname: picname[e.detail.current],
-      textclass:"text text-transition"
-    });   
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+
   },
-  confirm: function(e){
-    console.log(this.data.swipper_index)
-    this.setData({
-      label: this.data.swipper_index
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  },
+  start: function (e) {
+    wx.redirectTo({
+      url: '../chooseImg/chooseImg',
     })
-    // 把this.data.label传给后端
-    // wx.request({
-    //   url: 'http://localhost:8080/style',
-    //   data:{
-    //     "style":this.data.label
-    //   },
-    //   success(res) {
-    //     // 路由到下一个页面
-    //     wx.redirectTo({
-    //       url: '../camera/camera',
-    //     })
-    //   } 
-    // })
-      wx.navigateTo({
-        url: '../camera/camera',
-        success: function (res) {
-          // 通过eventChannel向被打开页面传送数据
-          res.eventChannel.emit('acceptDataFromOpenerPage', { data: this.data.label })
-        }
-      })
-  }
-  
+  },
 })

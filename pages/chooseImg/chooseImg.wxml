@@ -1,0 +1,17 @@
+<!-- <text class="text" >{{current_picname}}</text> -->
+<view class="page-body">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}”
+   duration="{{duration}}" bindchange='onSlideChangeEnd' style='height: 100%' 
+                vertical="{{isVertial}}" previous-margin="240rpx" next-margin="240rpx" 
+                circular="{{circular}}">
+    <block wx:for="{{styles}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" mode="scaleToFill"/>
+      </swiper-item>
+    </block>
+  </swiper>
+<mp-tabbar style="position:fixed;bottom:0;width:100%;left:0;right:0;" list="{{list}}" bindchange="tabChange"></mp-tabbar>
+<!-- <button class="confirm_btn" bindtap="confirm" color="transparent"> confirm </button> -->
+</view>
+
+    
