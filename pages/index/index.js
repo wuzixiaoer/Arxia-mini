@@ -1,11 +1,13 @@
 //index.js
 //获取应用实例
 const app = getApp()
+var picname = ["梵高","喜羊羊","大头猪"]
 
 Page(
   {
   data: {
     styles: ['/static/style_imgs/img1.jpg', '/static/style_imgs/img2.jpg', '/static/style_imgs/img3.jpg'],
+    current_picname: picname[0],
     indicatorDots: true,
     autoplay: false,
     interval: 5000,
@@ -20,7 +22,9 @@ Page(
     var that = this;
     that.setData({
       swipper_index: e.detail.current+1,
-      bgColor: this.data.bgColors[e.detail.current]
+      bgColor: this.data.bgColors[e.detail.current],
+      current_picname: picname[e.detail.current],
+      textclass:"text text-transition"
     });   
   },
   confirm: function(e){
@@ -41,8 +45,6 @@ Page(
         })
       } 
     })
-   
-    
   }
   
 })

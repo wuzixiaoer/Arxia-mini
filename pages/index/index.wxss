@@ -1,11 +1,20 @@
 /**index.wxss**/
 .container{
-  justify-items: flex-start;
+  justify-items:center;
+}
+
+.slide-image{
+  display: block;
+  widtht: 375rpx;
+  height: 670rpx;
+  overflow: hidden;
 }
 .page-body{
   width: 600rpx;
   height: 8000rpx;
+  justify-items:center;
 }
+
 .text{
   margin-top: 0rpx;
   margin-bottom: 70rpx;
@@ -14,7 +23,16 @@
   justify-content: center;
   display: flex;
   align-items: center;
+  opacity: 100;
 }
+
+.text-transition  {
+  transition: all 0.1s;
+}
+.text-on {
+  opacity: 100;
+}
+
 .confirm_btn{
   margin-top: 150rpx
 }
