@@ -2,6 +2,7 @@
 //获取应用实例
 const app = getApp()
 var picname = ["梵高","喜羊羊","大头猪"]
+var style_label = 0
 
 Page(
   {
@@ -15,8 +16,7 @@ Page(
     swipper_index: 0,
     label:0,
     bgColor: '#a8a8a8',
-    bgColors: ['#a8a8a8','#8b7355',"#4d4d4d"],
-    flag:0
+    bgColors:['#a8a8a8', '#8b7355', "#4d4d4d"]
   },
   onSlideChangeEnd: function (e) {
     var that = this;
@@ -33,18 +33,25 @@ Page(
       label: this.data.swipper_index
     })
     // 把this.data.label传给后端
-    wx.request({
-      url: 'http://localhost:8080/style',
-      data:{
-        "style":this.data.label
-      },
-      success(res) {
-        // 路由到下一个页面
-        wx.redirectTo({
-          url: '../camera/camera',
-        })
-      } 
-    })
+    // wx.request({
+    //   url: 'http://localhost:8080/style',
+    //   data:{
+    //     "style":this.data.label
+    //   },
+    //   success(res) {
+    //     // 路由到下一个页面
+    //     wx.redirectTo({
+    //       url: '../camera/camera',
+    //     })
+    //   } 
+    // })
+      wx.navigateTo({
+        url: '../camera/camera',
+        success: function (res) {
+          // 通过eventChannel向被打开页面传送数据
+          res.eventChannel.emit('acceptDataFromOpenerPage', { data: this.data.label })
+        }
+      })
   }
   
 })

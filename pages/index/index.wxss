@@ -10,6 +10,7 @@
   overflow: hidden;
 }
 .page-body{
+  margin-top:70rpx;
   width: 600rpx;
   height: 8000rpx;
   justify-items:center;

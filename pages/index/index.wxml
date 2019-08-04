@@ -1,4 +1,3 @@
-
 <view class="container" style="background-color: {{bgColor}}" >
 <text class="text" >{{current_picname}}</text>
   <view class="page-body">
