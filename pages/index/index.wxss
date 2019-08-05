@@ -44,3 +44,6 @@
   opacity: 0.5;
 } 
 
+page{
+  height: 100%;
+}

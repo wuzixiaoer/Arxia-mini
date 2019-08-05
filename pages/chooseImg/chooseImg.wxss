@@ -1,34 +1,121 @@
-/**index.wxss**/
-.slide-image{
-  display: block;
-  width: 100%;
-  height: 670rpx;
-  overflow: hidden;
+/**chooseImg.wxss**/
+
+page{
+  justify-content:flex-start;
+  background: #333333;
 }
 
-swiper-item{
-  display: flex;
-  height: 300rpx;
-  align-items:center;
-  overflow: hidden;
+.gallery{
+  margin-top: 40rpx;
 }
+
+.scroll-x{
+  display: flex;
+  height: 220rpx;
+  flex-direction: row;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+
+.slide-container{
+  display: flex;
+  flex-direction: column;
+  width: 390rpx;
+  padding-right: 20rpx;
+}
+
+.slide-img-container{
+  display: flex;
+  flex-direction: column;
+  width: 370rpx;
+  height: 220rpx;
+  /* border-radius: 20rpx; */
+  background-color: #000000;
+}
+
+.content-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80rpx;
+  padding-top: 0;
+  color: #858585;
+  font-size: 22rpx;
+  line-height: 44rpx;
+}
+
+.full-img{
+  width: 480rpx;
+  overflow: hidden;
+  margin-top: 40rpx;
+}
+
+.slide-img{
+  width: 370rpx;
+  height: 220rpx;
+  overflow: hidden;
+  /* border-radius: 10rpx 10rpx */
+}
+
+.bar{
+  height: 4rpx;
+  width: 370rpx;
+  background-color: #FF97B5;
+  margin-top: 24rpx;
+}
+
 .page-body{
   width: 100%;
-  height: 100%;
-  justify-items:center;
-}
-
-.text{
-  margin-top: 0rpx;
-  margin-bottom: 70rpx;
-  font-size:50rpx;
-  color:white;
-  justify-content: center;
   display: flex;
+  flex-direction:column;
+  justify-content:space-around;
   align-items: center;
-  opacity: 100;
+  background: #333333;
+  padding-bottom: 100rpx;
 }
 
-.confirm_btn{
-  margin-top: 150rpx
+.details{
+  display: flex;
+  flex-direction: column;
+  margin-top: 60rpx;
+}
+
+.details-title {
+  font-weight: 800;
+  color: #c8c8c8;
+  font-size: 24rpx;
+}
+
+.details-title-en{
+  font-weight: 800;
+  color: #c8c8c8;
+  font-family: Sukhumvit Set;
+  font-size: 24rpx;
+}
+
+.details-title-content{
+  margin-top: 30rpx;
+}
+.dim{
+  opacity:0.4; filter: alpha(opacity=40);
+}
+
+.toast {
+    float: right;
+    background-image: linear-gradient(35deg, #C8C8C8 45%, #FFADB9 100%);
+    position: fixed;
+    bottom: 60rpx;
+    border: 0 solid #ffffff;
+    border-radius: 500px;
+    height: 80rpx;
+    width: 240rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 22rpx;
+    letter-spacing:8rpx;
+    opacity: 0.9;
+
 }

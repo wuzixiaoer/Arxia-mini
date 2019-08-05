@@ -64,7 +64,7 @@ Page({
 
   },
   start: function (e) {
-    wx.redirectTo({
+    wx.navigateTo({
       url: '../chooseImg/chooseImg',
     })
   },

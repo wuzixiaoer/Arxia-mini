@@ -8,12 +8,12 @@ Component({
       pagePath: "index", 
       iconPath: "",
       selectedIconPath: "",
-      text: "啊啊"
+      text: "上一步"
     }, {
       pagePath: "../camera/camera",
       iconPath: "",
       selectedIconPath: "",
-      text: "接口"
+      text: "下一步"
     }]
   },   
   methods: {

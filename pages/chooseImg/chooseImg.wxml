@@ -1,17 +1,37 @@
 <!-- <text class="text" >{{current_picname}}</text> -->
-<view class="page-body">
-  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}”
-   duration="{{duration}}" bindchange='onSlideChangeEnd' style='height: 100%' 
-                vertical="{{isVertial}}" previous-margin="240rpx" next-margin="240rpx" 
-                circular="{{circular}}">
-    <block wx:for="{{styles}}">
-      <swiper-item>
-        <image src="{{item}}" class="slide-image" mode="scaleToFill"/>
-      </swiper-item>
-    </block>
-  </swiper>
-<mp-tabbar style="position:fixed;bottom:0;width:100%;left:0;right:0;" list="{{list}}" bindchange="tabChange"></mp-tabbar>
-<!-- <button class="confirm_btn" bindtap="confirm" color="transparent"> confirm </button> -->
+<view class='page-body'> 
+  <scroll-view class='gallery' scroll-x="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll">
+    <view class="scroll-x">
+      <view wx:for="{{imgUrls}}" bindtap="changeView" data-index="{{index}}" class="slide-container">
+        <view class='slide-img-container'>      
+          <image src="{{item}}"  class="slide-img {{label!=index?'dim':''}}" mode="aspectFill"/>
+        </view>
+        <view class='bar' style="opacity: {{label==index? ':1':'0' }}"></view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="content-container">
+      <image class="full-img" mode="widthFix" src="{{cur_img}}"/>
+      <view class="details">
+        <text class='details-title'>{{title}}</text>
+        <text class='details-title-en'>{{title_en}}</text>
+        <text class='details-title-content'>{{content}}</text>
+      </view>
+  </view>
+  <view size="50" class="toast" bindtap="nextStep">
+    进入名画
+  </view>
+  <modalView show="{{showModal}}" label='1' bindcancel="modalCancel" bindconfirm='modalConfirm' single='{{single}}'>
+    <view class='modal-content'>
+      <scroll-view scroll-y class='main-content'>
+        <view>这里面可替换成你想显示的其他内容</view>
+        <view>这里面可替换成你想显示的其他内容</view>
+        <text>这里面可替换成你想显示的其他内容</text>
+      </scroll-view>
+    </view>
+  </modalView>
+    <!-- <mp-tabbar style="position:fixed;bottom:0;width:100%;left:0;right:0;" list="{{list}}" bindchange="tabChange"></mp-tabbar> -->
 </view>
+<!-- <button class="confirm_btn" bindtap="confirm" color="transparent"> confirm </button> -->
 
     
