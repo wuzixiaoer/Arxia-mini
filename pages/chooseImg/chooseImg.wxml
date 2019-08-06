@@ -1,12 +1,12 @@
 <!-- <text class="text" >{{current_picname}}</text> -->
 <view class='page-body'> 
-  <scroll-view class='gallery' scroll-x="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll">
+  <scroll-view class='gallery' scroll-x="true" bindscrolltoupper="upper" bindscrolltolower="lower">
     <view class="scroll-x">
       <view wx:for="{{imgUrls}}" bindtap="changeView" data-index="{{index}}" class="slide-container">
         <view class='slide-img-container'>      
           <image src="{{item}}"  class="slide-img {{label!=index?'dim':''}}" mode="aspectFill"/>
         </view>
-        <view class='bar' style="opacity: {{label==index? ':1':'0' }}"></view>
+        <view class='bar' style="opacity: {{label==index? '1':'0' }}"></view>
       </view>
     </view>
   </scroll-view>

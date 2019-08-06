@@ -1,86 +1,89 @@
+// pages/gallery/gallery.js
+var imgs_list = [
+  "/static/imgs/img2.jpg",
+  "/static/imgs/img5.jpg",
+  "/static/imgs/img3.jpg",
+  "/static/imgs/img4.jpg",
+  "/static/imgs/img1.jpg",
+  "/static/imgs/img6.jpg",
+]
+
+var imgs_title = [
+  "我和梵高",
+  "梵高和我",
+  "梵高和我",
+  "梵高和我",
+  "梵高和我",
+  "梵高和我",
+]
+var place = [
+  true,false,false,true,false,true
+]
+
 Page({
-  data:{
-    img:"",
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    imgs_list: imgs_list,
+    place: place,
+    imgs_title: imgs_title
   },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.ans)
-    this.setData({
-      img:'data:image/png;base64,'+options.ans
-    })
-    // wx.getStorage({
-    //   key: 'result',
-    //   success: function(res) {
-    //     this.setData({
-    //       result: res.data
-    //     })
-    //   },
-    //   fail: function(){
-    //     //fail
-    //   }
-    // })
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-    
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    
+
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-    
-  },
 
-  /**
-   * 保存图像
-   */
-  save: function(){//TODO
-    wx.saveFile({
-      tempFilePath: '',
-      success: function(res) {},
-      fail: function(res) {},
-      complete: function(res) {},
-    })
   }
 })

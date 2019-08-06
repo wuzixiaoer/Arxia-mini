@@ -6,4 +6,6 @@
   </div>
   <div class="circle-btn" bindtap="start">
   START</div>
+    <div class="circle-btn" bindtap="gallery">
+  GALLERY</div>
 </view>

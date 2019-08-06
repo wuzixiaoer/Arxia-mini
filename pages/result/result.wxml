@@ -1,5 +1,6 @@
 <view class="container">
   <view class="page-body">
+    <image src="{{img}}" ></image>
 <button bindtap="save" > save</button>
     </view>
    </view> 

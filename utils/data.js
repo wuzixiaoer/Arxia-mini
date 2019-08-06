@@ -3,13 +3,13 @@
 //     {
 //       "title": "大碗岛的星期天下午",
 //       "title_en": "A Sunday Afternoon on the Ile de la Grande Jatte",
-//       "url": "/static/imgs/img1.jpg",
+//       "url": "/static/imgs/img3.jpg",
 //       "details": "<p>点彩画新印象主义代表画家乔治·修拉创作的一幅布面油画，该画于1886年展出，现收藏于美国芝加哥美术学院.该画描写了人们在塞纳河阿尼埃的大碗岛上休息度假的情景：阳光下的河滨树林间，人们在休憩、散步，垂钓，河面上隐约可见有人在划船，午后的阳光拉下人们长长的身影。这幅画主要采用了点彩画法，画面宁静而和谐。<br />点彩画新印象主义代表画家乔治·修拉创作的一幅布面油画，该画于1886年展出，现收藏于美国芝加哥美术学院。该画描写了人们在塞纳河阿尼埃的大碗岛上休息度假的情景：阳光下的河滨树林间，人们在休憩、散步，垂钓，河面上隐约可见有人在划船，午后的阳光拉下人们长长的身影。这幅画主要采用了点彩画法，画面宁静而和谐。<>"
 //     },
 //     {
 //       "title": "大狗子的早上",
 //       "title_en": "A Sunday Afternoon on the Ile de la Grande Jatte",
-//       "url": "/static/imgs/img2.jpg",
+//       "url": "/static/imgs/img4.jpg",
 //       "details": "点彩画新印象主义代表画家乔治·修拉创作的一幅布面油画，该画于1886年展出，现收藏于美国芝加哥美术学院.该画描写了人们在塞纳河阿尼埃的大碗岛上休息度假的情景：阳光下的河滨树林间，人们在休憩、散步，垂钓，河面上隐约可见有人在划船，午后的阳光拉下人们长长的身影。这幅画主要采用了点彩画法，画面宁静而和谐。<br> 点彩画新印象主义代表画家乔治·修拉创作的一幅布面油画，该画于1886年展出，现收藏于美国芝加哥美术学院。该画描写了人们在塞纳河阿尼埃的大碗岛上休息度假的情景：阳光下的河滨树林间，人们在休憩、散步，垂钓，河面上隐约可见有人在划船，午后的阳光拉下人们长长的身影。这幅画主要采用了点彩画法，画面宁静而和谐。"
 //     },
 //     {
@@ -49,8 +49,8 @@ var picInfo =
      "A Sunday Afternoon on the Ile de la Grande Jatte",
    ],
    url:[
-     "/static/imgs/img1.jpg",
-     "/static/imgs/img2.jpg",
+     "/static/imgs/img3.jpg",
+     "/static/imgs/img4.jpg",
      "/static/imgs/img3.jpg",
      "/static/imgs/img4.jpg",
      "/static/imgs/img5.jpg"
@@ -67,10 +67,10 @@ var picInfo =
     ],
     expUrls:[
       ["/static/exp_imgs/eximg1.png"],
-      ["/static/exp_imgs/eximg1.png", "/static/exp_imgs/eximg2.jpg"],
-      ["/static/exp_imgs/eximg1.png", "/static/exp_imgs/eximg2.jpg"],
-      ["/static/exp_imgs/eximg1.png", "/static/exp_imgs/eximg2.jpg"],
-      ["/static/exp_imgs/eximg1.png", "/static/exp_imgs/eximg2.jpg"],
+      ["/static/exp_imgs/eximg1.png"],
+      ["/static/exp_imgs/eximg1.png"],
+      ["/static/exp_imgs/eximg1.png"],
+      ["/static/exp_imgs/eximg1.png"],
     ]
  }
 
