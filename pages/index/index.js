@@ -68,4 +68,9 @@ Page({
       url: '../chooseImg/chooseImg',
     })
   },
+  gallery: function (e) {
+    wx.navigateTo({
+      url: '../gallery/gallery',
+    })
+  },
 })

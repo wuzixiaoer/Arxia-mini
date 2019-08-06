@@ -7,10 +7,12 @@
             </swiper-item>         
       </block>
   </swiper>
-    <scroll-view scroll-y class='main-content'>
-      <view>拍摄建议</view>
-      <view>{{notice}}</view>
-    </scroll-view>
+    <view class='main-content'>
+      <view class='main-content-text'>
+        <view class="suggest">拍摄建议</view>
+        <view>{{notice}}</view>
+      </view>
+    </view>
     <view class='modal-footer'>
       <view wx:if='{{!single}}' class='cancel-btn' bindtap='cancel'>取消</view>
       <view class='confirm-btn' bindtap="chooseImage">我知道了 </view>

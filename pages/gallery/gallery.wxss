@@ -1,0 +1,56 @@
+/* pages/gallery/gallery.wxss */
+
+page{
+  justify-content:flex-start;
+  background: #333333;
+}
+
+.page-body{
+  width: 100%;
+  display: flex;
+  flex-direction:column;
+  justify-content:space-around;
+  align-items: center;
+  background: #333333;
+  padding-bottom: 100rpx;
+  padding-top: 100rpx;
+
+}
+
+.imgs-container{
+  display: flex;
+  flex-direction: column;
+
+
+  width: 100%;
+  padding-bottom: 120rpx;
+}
+
+.right {
+  align-items:flex-end;
+}
+
+.left {
+  align-items:flex-start;
+}
+
+.gallery-container{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  width: 90%;
+  /* padding: 30rpx; */
+}
+
+.photo{
+  width: 80%;
+}
+
+.photo-title{
+  font-size: 22rpx;
+  color: #858585;
+  margin-top: 30rpx;
+  text-align: left;
+  width: 80%;
+}

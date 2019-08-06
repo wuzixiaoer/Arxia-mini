@@ -60,6 +60,7 @@ Component({
     // 点击确定按钮的回调函数
     chooseImage: function () {
       var _this = this;
+      var style_id = parseInt(this.properties.label)
       wx.chooseImage({
         count: 1, // 默认9
         sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
@@ -68,6 +69,24 @@ Component({
           // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
           _this.setData({
             tempFilePaths: res.tempFilePaths
+          })
+          var tempFilePath = res.tempFilePaths
+          wx.uploadFile({
+            url:'http://106.75.34.228:82/infer-8438a117-fbef-4184-a6e2-c6ed2d7b224f/style',
+            filePath:tempFilePath[0],
+            name:'content',
+            header:{
+              "Content-Type":"multipart/form-data"
+            },
+            formData:{
+              'style_id':style_id
+            },
+            success(res){
+              var ans = res.data
+              wx.navigateTo({
+                url:'../result/result?ans='+ans,
+              })
+            }
           })
         }
       })

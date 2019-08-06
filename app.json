@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/camera/camera",
     "pages/result/result",
-    "pages/chooseImg/chooseImg"
+    "pages/chooseImg/chooseImg",
+    "pages/gallery/gallery"
   ],
   "window": {
     "backgroundTextStyle": "light",

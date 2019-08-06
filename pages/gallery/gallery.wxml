@@ -1,0 +1,13 @@
+<!--pages/gallery/gallery.wxml-->
+<view class='page-body'>
+    <view class="gallery-container">
+        <block wx:for="{{imgs_list}}" wx:for-index="index">
+            <view class="imgs-container {{place[index]?'left':'right'}}" >
+                <image  class="photo"
+                        src="{{item}}"
+                        mode="widthFix"/> 
+                <text class="photo-title">{{imgs_title[index]}}</text>
+            </view>
+        </block>
+    </view>
+</view>
