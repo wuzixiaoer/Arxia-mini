@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mp-tabbar": "../../custom-tab-bar/index",
+    "modalView": "../../modal/modal"
+  }
+}

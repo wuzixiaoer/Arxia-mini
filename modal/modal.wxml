@@ -1,0 +1,19 @@
+<view class='modal-mask' wx:if='{{show}}' bindtap='clickMask'>
+  <view class='modal-content'>
+    <swiper  autoplay="True" indicator-dots="True"  interval="2000" class='imgs-swp'>
+      <block wx:for="{{expUrls}}">    
+            <swiper-item class="exp-imgs-container">
+              <image class="exp-img" src='{{item}}' mode="aspectFill"></image>
+            </swiper-item>         
+      </block>
+  </swiper>
+    <scroll-view scroll-y class='main-content'>
+      <view>拍摄建议</view>
+      <view>{{notice}}</view>
+    </scroll-view>
+    <view class='modal-footer'>
+      <view wx:if='{{!single}}' class='cancel-btn' bindtap='cancel'>取消</view>
+      <view class='confirm-btn' bindtap="chooseImage">我知道了 </view>
+    </view>
+  </view>
+</view>
