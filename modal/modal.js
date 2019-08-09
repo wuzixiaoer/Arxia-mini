@@ -1,7 +1,8 @@
 // modal/modal.js
 var picInfo = require('../utils/data.js'); 
 var notice_list = [
-  "推荐使用人像图片!","推荐使用自拍"
+  "采用全身像可以在这张画中获得最佳的表现哦!",
+  "采用自拍肖像照片可以在这张画中获得最佳的表现！"
 ]
 Component({
   /**

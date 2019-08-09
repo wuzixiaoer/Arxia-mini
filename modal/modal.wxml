@@ -14,8 +14,12 @@
       </view>
     </view>
     <view class='modal-footer'>
-      <view wx:if='{{!single}}' class='cancel-btn' bindtap='cancel'>取消</view>
-      <view class='confirm-btn' bindtap="chooseImage">我知道了 </view>
+      <view wx:if='{{!single}}' class='cancel-btn' bindtap='cancel'>
+          <image src="../static/back.png" mode="widthFix" class="back-icon"/>
+      </view>
+      <view class='confirm-btn' bindtap="chooseImage">
+        <image src="../static/cam.png" mode="widthFix" class="cam-icon"/>
+      </view>
     </view>
   </view>
 </view>

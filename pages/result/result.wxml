@@ -1,8 +1,10 @@
-<view class="container">
-  <view class="page-body">
-    <image src="{{img}}" ></image>
-<button bindtap="save" > save</button>
-    </view>
-   </view> 
+
+<view class="page-body">
+  <block class="img-container">
+    <image src="{{img}}" mode="widthFix" class="image-style"></image>
+  </block>
+  <button bindtap="save" > save</button>
+</view>
+
 
     

@@ -1,11 +1,25 @@
 <!--pages/index/index.wxml-->
 <view class="page-body">
   <div class="logo">
-    <image class="logo-img" src='../../static/logo.png'></image>
-    <text class="logo-text"> AI LINK ART </text> 
+    <image class="logo-img" src='https://i.loli.net/2019/08/08/JmG6DL3nQXkYFSj.png'
+    mode="widthFix"></image>
+    <!-- <text class="logo-text"> AI LINK ART </text>  -->
   </div>
-  <div class="circle-btn" bindtap="start">
-  START</div>
-    <div class="circle-btn" bindtap="gallery">
-  GALLERY</div>
+  <div class="liquid-btn" bindtap="start">
+    <view class="btn-l1 btn-animation-1">
+      <image class="btn-l1-img" src="https://i.loli.net/2019/08/08/M2YDUkfa6bI5qOs.png" mode="widthFix" />
+    </view>
+    <view class="btn-l2 btn-animation-2">
+      <image class="btn-l2-img" src="https://i.loli.net/2019/08/08/6Uj9L5ZEfAyzOxN.png" mode="widthFix" />
+    </view>
+    <view class="btn-l3 btn-animation-3" >
+      <image class="btn-l3-img" src="https://i.loli.net/2019/08/08/mgeqOR9JIK72ybA.png" mode="widthFix" />
+    </view>
+  </div>
+  <view class="gallery-button" bindtap="gallery">
+    <view >
+          <text > 查看用户作品 </text>
+    </view>
+  </view>
+
 </view>

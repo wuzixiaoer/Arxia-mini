@@ -21,12 +21,9 @@
   <view size="50" class="toast" bindtap="nextStep">
     进入名画
   </view>
-  <modalView show="{{showModal}}" label='1' bindcancel="modalCancel" bindconfirm='modalConfirm' single='{{single}}'>
+  <modalView show="{{showModal}}" label='{{label}}' bindcancel="modalCancel" bindconfirm='modalConfirm' single='{{single}}'>
     <view class='modal-content'>
       <scroll-view scroll-y class='main-content'>
-        <view>这里面可替换成你想显示的其他内容</view>
-        <view>这里面可替换成你想显示的其他内容</view>
-        <text>这里面可替换成你想显示的其他内容</text>
       </scroll-view>
     </view>
   </modalView>
