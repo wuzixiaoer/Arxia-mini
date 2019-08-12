@@ -21,14 +21,12 @@
   <view size="50" class="toast" bindtap="nextStep">
     进入名画
   </view>
-  <modalView show="{{showModal}}" label='{{label}}' bindcancel="modalCancel" bindconfirm='modalConfirm' single='{{single}}'>
+  <modalView show="{{showModal}}" label='{{label}}' expurl="{{exp_url}}" notice = "{{notice}}" bindcancel="modalCancel" bindconfirm='modalConfirm' single='{{single}}'>
     <view class='modal-content'>
       <scroll-view scroll-y class='main-content'>
       </scroll-view>
     </view>
   </modalView>
-    <!-- <mp-tabbar style="position:fixed;bottom:0;width:100%;left:0;right:0;" list="{{list}}" bindchange="tabChange"></mp-tabbar> -->
 </view>
-<!-- <button class="confirm_btn" bindtap="confirm" color="transparent"> confirm </button> -->
 
     

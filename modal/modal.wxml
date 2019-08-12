@@ -1,7 +1,7 @@
 <view class='modal-mask' wx:if='{{show}}' bindtap='clickMask'>
   <view class='modal-content'>
-    <swiper  autoplay="True" indicator-dots="True"  interval="2000" class='imgs-swp'>
-      <block wx:for="{{expUrls}}">    
+    <swiper  autoplay="False" indicator-dots="False"  interval="2000" class='imgs-swp'>
+      <block wx:for="{{expurl}}">    
             <swiper-item class="exp-imgs-container">
               <image class="exp-img" src='{{item}}' mode="aspectFill"></image>
             </swiper-item>         

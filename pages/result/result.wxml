@@ -3,7 +3,9 @@
   <block class="img-container">
     <image src="{{img}}" mode="widthFix" class="image-style"></image>
   </block>
-  <button bindtap="save" > save</button>
+  <view size="50" class="save" bindtap="_save">
+  save
+  </view>
 </view>
 
 

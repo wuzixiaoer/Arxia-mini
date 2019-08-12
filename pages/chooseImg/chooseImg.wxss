@@ -120,5 +120,4 @@ page{
     font-size: 22rpx;
     letter-spacing:8rpx;
     opacity: 0.9;
-
 }

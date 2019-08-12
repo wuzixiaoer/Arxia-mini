@@ -19,28 +19,19 @@ Component({
       type: Boolean,
       value: false
     },
-    label: String
+    label: String,
+    notice: String,
+    expurl: Array
   },
 
   /**
    * 组件的初始数据
    */
   data: {
-    notice:"",
-    expUrls:"",
-    tempFilePaths: ''
-
+    tempFilePaths: '',
   },
 
   attached: function (e) {
-    // console.log(this.properties.label)
-    var id = parseInt(this.properties.label)
-    this.setData({
-      notice: notice_list[picInfo.picInfo["notice"][id]],
-      expUrls: picInfo.picInfo["expUrls"][id]
-      }
-    )
-    console.log(this)
   },
 
 
@@ -69,11 +60,12 @@ Component({
         success: function (res) {
           // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
           _this.setData({
-            tempFilePaths: res.tempFilePaths
+            tempFilePaths: res.tempFilePaths,
           })
           var tempFilePath = res.tempFilePaths
+          wx.showLoading({ title: '加载中…', icon: 'loading', duration: 1000})
           wx.uploadFile({
-            url:'http://106.75.34.228:82/infer-8438a117-fbef-4184-a6e2-c6ed2d7b224f/style',
+            url:'https://jupyter-uaitrain-bj2.ucloud.cn:443/infer-8438a117-fbef-4184-a6e2-c6ed2d7b224f/style',
             filePath:tempFilePath[0],
             name:'content',
             header:{
@@ -82,7 +74,9 @@ Component({
             formData:{
               'style_id':style_id
             },
+            
             success(res){
+              
               var ans = res.data
               wx.navigateTo({
                 url:'../result/result?ans='+ans,

@@ -1,6 +1,19 @@
 //app.js
 App({
-  onLaunch: function () {}
+  onLaunch: function () {
+    wx.getSetting({
+      success(res) {
+        if(!res.authSetting['scope.writePhotosAlbum']){
+          wx.authorize({
+            scope: 'scope.writePhotosAlbum',
+            success(){
+              console.log("授权成功")
+            }
+          })
+        }
+      }
+    })
+  },
   
   //   // 展示本地存储能力 
   //   var logs = wx.getStorageSync('logs') || []

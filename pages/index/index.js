@@ -1,4 +1,9 @@
 // pages/index/index.js
+var touchDot = 0;//触摸时的原点 
+
+var time = 0;// 时间记录，用于滑动时且时间小于1s则执行左右滑动 
+
+var interval = "";// 记录/清理时间记录 
 Page({
 
   /**
@@ -68,7 +73,10 @@ Page({
       url: '../chooseImg/chooseImg',
     })
   },
+  
+
   gallery: function (e) {
+
     wx.navigateTo({
       url: '../gallery/gallery',
     })

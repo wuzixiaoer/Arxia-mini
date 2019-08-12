@@ -1,28 +1,45 @@
 Page({
   data:{
+    oriImg:"",
     img:"",
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.ans)
     this.setData({
+      oriImg:options.ans,
       img:'data:image/png;base64,'+options.ans
     })
-    // wx.getStorage({
-    //   key: 'result',
-    //   success: function(res) {
-    //     this.setData({
-    //       result: res.data
-    //     })
-    //   },
-    //   fail: function(){
-    //     //fail
-    //   }
-    // })
   },
-
+  _save: function (e) {
+    console.log("here!")
+    var imgSrc = this.data.oriImg;//base64编码
+    const buffer = wx.base64ToArrayBuffer(imgSrc);
+    var save = wx.getFileSystemManager();
+    var number = Math.random();
+    save.writeFile({
+      filePath: wx.env.USER_DATA_PATH + '/pic' + number + '.png',
+      data: buffer,
+      encoding: 'binary',
+      success: res => {
+        wx.saveImageToPhotosAlbum({
+          filePath: wx.env.USER_DATA_PATH + '/pic' + number + '.png',
+          success: function (res) {
+            wx.showToast({
+              title: '保存成功',
+            })
+          },
+          fail: function (err) {
+            console.log(err)
+          }
+        })
+        console.log(res)
+      }, fail: err => {
+        console.log(err)
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
