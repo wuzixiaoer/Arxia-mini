@@ -4,7 +4,7 @@
     <image src="{{img}}" mode="widthFix" class="image-style"></image>
   </block>
   <view size="50" class="save" bindtap="_save">
-  save
+  SAVE
   </view>
 </view>
 

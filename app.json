@@ -15,5 +15,8 @@
     "enablePullDownRefresh": false
   },
   "sitemapLocation": "sitemap.json",
-  "usingComponents": {}
+  "usingComponents": {},
+  "networkTimeout": {
+    "request": 1000
+  }
 }

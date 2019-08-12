@@ -63,7 +63,7 @@ Component({
             tempFilePaths: res.tempFilePaths,
           })
           var tempFilePath = res.tempFilePaths
-          wx.showLoading({ title: '加载中…', icon: 'loading', duration: 1000})
+          wx.showLoading({ title: '加载中…'})
           wx.uploadFile({
             url:'https://jupyter-uaitrain-bj2.ucloud.cn:443/infer-8438a117-fbef-4184-a6e2-c6ed2d7b224f/style',
             filePath:tempFilePath[0],
@@ -76,10 +76,24 @@ Component({
             },
             
             success(res){
-              
+              console.log("success!")
               var ans = res.data
               wx.navigateTo({
                 url:'../result/result?ans='+ans,
+              })
+            },
+            fail: function () {
+              console.log("fail!")
+              wx.hideLoading();
+              wx.showModal({
+                title: '提示',
+                showCancel: false,
+                content: '请求超时！',
+                success: function () {
+                  wx.redirectTo({
+                    url: '../chooseImg/chooseimg'
+                  })
+                }
               })
             }
           })
