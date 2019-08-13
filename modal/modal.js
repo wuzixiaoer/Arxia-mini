@@ -77,27 +77,28 @@ Component({
             },
             
             success(res){
-              console.log("success!")
+              if(res.statusCode==200){
               var ans = res.data
               wx.navigateTo({
                 url:'../result/result?ans='+ans,
               })
               wx.hideLoading()
+              }
+              else{
+                console.log("fail!")
+                wx.hideLoading();
+                wx.showModal({
+                  title: '提示',
+                  showCancel: false,
+                  content: '网络不好，请重试！',
+                  success: function () {
+                    wx.navigateTo({
+                      url: '../chooseImg/chooseImg'
+                    })
+                  }
+                })
+              }
             },
-            fail: function () {
-              console.log("fail!")
-              wx.hideLoading();
-              wx.showModal({
-                title: '提示',
-                showCancel: false,
-                content: '请求超时！',
-                success: function () {
-                  wx.redirectTo({
-                    url: '../chooseImg/chooseimg'
-                  })
-                }
-              })
-            }
           })
         }
       })

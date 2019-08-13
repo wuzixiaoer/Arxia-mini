@@ -1,15 +1,16 @@
 // pages/gallery/gallery.js
 var imgs_list = [
-"http://ww4.sinaimg.cn/large/006tNc79ly1g5v1cfla5gj30nf0jd4qp.jpg",
-"http://ww2.sinaimg.cn/large/006tNc79ly1g5v1oqmir6j30jg0oz7wh.jpg",
-"http://ww3.sinaimg.cn/large/006tNc79ly1g5v1ph3r7fj30ps0wo1ky.jpg",
-"http://ww3.sinaimg.cn/large/006tNc79ly1g5v1qdrm2yj311e0u07wk.jpg",
-"http://ww1.sinaimg.cn/large/006tNc79ly1g5v26j82uyj31hv0u07ma.jpg",
-"http://ww2.sinaimg.cn/large/006tNc79ly1g5v1smcqz6j30zl0u0x6s.jpg",
-"http://ww2.sinaimg.cn/large/006tNc79ly1g5v1t202bzj311y0u0e87.jpg",
-"http://ww1.sinaimg.cn/large/006tNc79ly1g5v1te0r26j30p00jg1kx.jpg",
-"http://ww2.sinaimg.cn/large/006tNc79ly1g5v1tukipxj30sg0vgnpd.jpg",
-"http://ww4.sinaimg.cn/large/006tNc79ly1g5v1ue5ft4j30u011eu0x.jpg",
+  "http://ww4.sinaimg.cn/large/006tNc79ly1g5v1cfla5gj30nf0jd4qp.jpg",
+  "http://ww4.sinaimg.cn/large/006tNc79ly1g5x6amdeehj30jg0ozte7.jpg",
+  "http://ww2.sinaimg.cn/large/006tNc79ly1g5x65a383yj30ps0wowk6.jpg",
+  "http://ww3.sinaimg.cn/large/006tNc79ly1g5v1qdrm2yj311e0u07wk.jpg",
+  "http://ww1.sinaimg.cn/large/006tNc79ly1g5v26j82uyj31hv0u07ma.jpg",
+  "http://ww2.sinaimg.cn/large/006tNc79ly1g5v1smcqz6j30zl0u0x6s.jpg",
+  "http://ww2.sinaimg.cn/large/006tNc79ly1g5x6bbcyswj311y0u0afa.jpg",
+  "http://ww1.sinaimg.cn/large/006tNc79ly1g5v1te0r26j30p00jg1kx.jpg",
+  "http://ww2.sinaimg.cn/large/006tNc79ly1g5xtl7wdqej30pd0n2gqk.jpg",
+  "http://ww4.sinaimg.cn/large/006tNc79ly1g5x6de3a4aj30hg0m8qog.jpg",
+  "http://ww4.sinaimg.cn/large/006tNc79ly1g5xto7nsg6j30u011e4qq.jpg",
 ]
 
 var imgs_title = [
@@ -22,10 +23,11 @@ var imgs_title = [
   "麦田里的收割者",
   "阿尔的卧室",
   "女人肖像",
+  "呐喊",
   "头戴草帽的朱莉·马奈",
 ]
 var place = [
-  true, false, false, true, false, true,true, false,false
+  true, false, false, true, false, true,true, false,true,false
 ]
 
 Page({
