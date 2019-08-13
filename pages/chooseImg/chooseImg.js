@@ -3,8 +3,8 @@
 const app = getApp()
 var picInfo = require('../../utils/data.js'); 
 var notice_list = [
-  "采用全身像可以在这张画中获得最佳的表现哦!",
-  "采用自拍肖像照片可以在这张画中获得最佳的表现！"
+  "选取光线均衡的全身照可以在这幅名画中获得更好的效果哟！",
+  "选取曝光均匀、成像清晰的半身照可以获得更好的效果哟！"
 ]
 
 Page(
@@ -43,7 +43,6 @@ Page(
   changeView: function(e){
     // console.log(this)
     var id = e.currentTarget.dataset.index
-    console.log(picInfo.picInfo)
     this.setData(
       {
         label: id,

@@ -29,6 +29,7 @@ Component({
    */
   data: {
     tempFilePaths: '',
+    indicator_dots: false
   },
 
   attached: function (e) {
@@ -81,6 +82,7 @@ Component({
               wx.navigateTo({
                 url:'../result/result?ans='+ans,
               })
+              wx.hideLoading()
             },
             fail: function () {
               console.log("fail!")

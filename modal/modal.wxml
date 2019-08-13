@@ -1,6 +1,6 @@
 <view class='modal-mask' wx:if='{{show}}' bindtap='clickMask'>
   <view class='modal-content'>
-    <swiper  autoplay="False" indicator-dots="False"  interval="2000" class='imgs-swp'>
+    <swiper  autoplay="False" indicator-dots="{{indicator_dots}}"  interval="2000" class='imgs-swp'>
       <block wx:for="{{expurl}}">    
             <swiper-item class="exp-imgs-container">
               <image class="exp-img" src='{{item}}' mode="aspectFill"></image>
@@ -10,7 +10,7 @@
     <view class='main-content'>
       <view class='main-content-text'>
         <view class="suggest">拍摄建议</view>
-        <view>{{notice}}</view>
+        <view class="suggest-content">{{notice}}</view>
       </view>
     </view>
     <view class='modal-footer'>

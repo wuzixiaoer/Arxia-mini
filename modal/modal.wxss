@@ -31,10 +31,12 @@
 
 /*中间内容*/
 .main-content{
-  height: 30%;
+  height: 35%;
   display: flex;
-  flex-direction: column;
-  align-content: flex-start;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
   overflow-y: hidden; 
 }
 
@@ -42,7 +44,7 @@
 .modal-footer{
   display: flex;
   flex-direction: row;
-  height:20%;
+  height:15%;
 }
 
 .cancel-btn, .confirm-btn{
@@ -57,7 +59,17 @@
 
 .suggest{
   font-weight: 800;
-  margin-bottom: 30rpx;
+  margin-bottom: 24rpx;
+  color: #2b2b2b;
+  font-size: 30rpx;
+  letter-spacing: 3rpx;
+}
+
+.suggest-content{
+  color: #2b2b2b;
+  letter-spacing: 3rpx;
+  line-height: 40rpx;
+
 }
 .cancel-btn{
   color: #000;
@@ -74,6 +86,7 @@
 }
 
 .exp-img{
+  width: 100%;
   height: 100%;
 }
 
