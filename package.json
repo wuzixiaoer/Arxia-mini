@@ -18,6 +18,6 @@
   "homepage": "https://github.com/wuzixiaoer/Arxia-mini#readme",
   "description": "",
   "dependencies": {
-    "log4js": "^4.5.1"
+    "log4js": "^6.4.0"
   }
 }
